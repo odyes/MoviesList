@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		3DB343D528DA01C4006F6BDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB343D428DA01C4006F6BDA /* AppDelegate.swift */; };
-		3DB343D728DA01C4006F6BDA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB343D628DA01C4006F6BDA /* ViewController.swift */; };
+		3DB343D728DA01C4006F6BDA /* PeliculasController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB343D628DA01C4006F6BDA /* PeliculasController.swift */; };
 		3DB343DA28DA01C4006F6BDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DB343D828DA01C4006F6BDA /* Main.storyboard */; };
 		3DB343DC28DA01C6006F6BDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DB343DB28DA01C6006F6BDA /* Assets.xcassets */; };
 		3DB343DF28DA01C6006F6BDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DB343DD28DA01C6006F6BDA /* LaunchScreen.storyboard */; };
 		3DB343EA28DA01C6006F6BDA /* tableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB343E928DA01C6006F6BDA /* tableViewTests.swift */; };
 		3DB343F528DA01C6006F6BDA /* tableViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB343F428DA01C6006F6BDA /* tableViewUITests.swift */; };
+		3DB3440328DA038D006F6BDA /* Pelicula.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB3440228DA038D006F6BDA /* Pelicula.swift */; };
+		3DB3440A28DA17A5006F6BDA /* CeldaPeliculaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB3440928DA17A5006F6BDA /* CeldaPeliculaController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,7 @@
 /* Begin PBXFileReference section */
 		3DB343D128DA01C4006F6BDA /* tableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DB343D428DA01C4006F6BDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3DB343D628DA01C4006F6BDA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3DB343D628DA01C4006F6BDA /* PeliculasController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeliculasController.swift; sourceTree = "<group>"; };
 		3DB343D928DA01C4006F6BDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3DB343DB28DA01C6006F6BDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3DB343DE28DA01C6006F6BDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +49,8 @@
 		3DB343F028DA01C6006F6BDA /* tableViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tableViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DB343F428DA01C6006F6BDA /* tableViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableViewUITests.swift; sourceTree = "<group>"; };
 		3DB343F628DA01C6006F6BDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DB3440228DA038D006F6BDA /* Pelicula.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pelicula.swift; sourceTree = "<group>"; };
+		3DB3440928DA17A5006F6BDA /* CeldaPeliculaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeldaPeliculaController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +101,11 @@
 		3DB343D328DA01C4006F6BDA /* tableView */ = {
 			isa = PBXGroup;
 			children = (
-				3DB343D428DA01C4006F6BDA /* AppDelegate.swift */,
-				3DB343D628DA01C4006F6BDA /* ViewController.swift */,
-				3DB343D828DA01C4006F6BDA /* Main.storyboard */,
-				3DB343DB28DA01C6006F6BDA /* Assets.xcassets */,
-				3DB343DD28DA01C6006F6BDA /* LaunchScreen.storyboard */,
-				3DB343E028DA01C6006F6BDA /* Info.plist */,
+				3DB3440828DA0655006F6BDA /* Recursos */,
+				3DB3440728DA0633006F6BDA /* app */,
+				3DB3440628DA05EA006F6BDA /* Controladores */,
+				3DB3440528DA05B8006F6BDA /* Vistas */,
+				3DB3440428DA054F006F6BDA /* Modelos */,
 			);
 			path = tableView;
 			sourceTree = "<group>";
@@ -123,6 +126,49 @@
 				3DB343F628DA01C6006F6BDA /* Info.plist */,
 			);
 			path = tableViewUITests;
+			sourceTree = "<group>";
+		};
+		3DB3440428DA054F006F6BDA /* Modelos */ = {
+			isa = PBXGroup;
+			children = (
+				3DB3440228DA038D006F6BDA /* Pelicula.swift */,
+			);
+			name = Modelos;
+			sourceTree = "<group>";
+		};
+		3DB3440528DA05B8006F6BDA /* Vistas */ = {
+			isa = PBXGroup;
+			children = (
+				3DB343D828DA01C4006F6BDA /* Main.storyboard */,
+				3DB343DD28DA01C6006F6BDA /* LaunchScreen.storyboard */,
+			);
+			name = Vistas;
+			sourceTree = "<group>";
+		};
+		3DB3440628DA05EA006F6BDA /* Controladores */ = {
+			isa = PBXGroup;
+			children = (
+				3DB343D628DA01C4006F6BDA /* PeliculasController.swift */,
+				3DB3440928DA17A5006F6BDA /* CeldaPeliculaController.swift */,
+			);
+			name = Controladores;
+			sourceTree = "<group>";
+		};
+		3DB3440728DA0633006F6BDA /* app */ = {
+			isa = PBXGroup;
+			children = (
+				3DB343E028DA01C6006F6BDA /* Info.plist */,
+				3DB343D428DA01C4006F6BDA /* AppDelegate.swift */,
+			);
+			name = app;
+			sourceTree = "<group>";
+		};
+		3DB3440828DA0655006F6BDA /* Recursos */ = {
+			isa = PBXGroup;
+			children = (
+				3DB343DB28DA01C6006F6BDA /* Assets.xcassets */,
+			);
+			name = Recursos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,7 +302,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DB343D728DA01C4006F6BDA /* ViewController.swift in Sources */,
+				3DB3440A28DA17A5006F6BDA /* CeldaPeliculaController.swift in Sources */,
+				3DB343D728DA01C4006F6BDA /* PeliculasController.swift in Sources */,
+				3DB3440328DA038D006F6BDA /* Pelicula.swift in Sources */,
 				3DB343D528DA01C4006F6BDA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

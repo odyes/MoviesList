@@ -1,24 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--PeliculasController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="BYZ-38-t0r" userLabel="PeliculasController" customClass="PeliculasController" customModule="tableView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="peli">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5p2-s9-qpo" userLabel="Lista peliclas">
+                                <rect key="frame" x="0.0" y="44" width="375" height="768"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="celdaPelicula" rowHeight="79" id="tL0-zV-dta" userLabel="Celda pelicula" customClass="CeldaPeliculaController" customModule="tableView" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="79"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tL0-zV-dta" id="4rx-Dg-eMN">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="78.666666666666671"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tìtulo de la pelicula" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qpu-09-k42">
+                                                    <rect key="frame" x="15" y="11" width="148" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Director" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LP8-fw-VZF">
+                                                    <rect key="frame" x="15" y="42" width="49" height="16"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Año" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pyg-Ku-evn">
+                                                    <rect key="frame" x="336" y="42" width="24" height="16"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="LP8-fw-VZF" firstAttribute="leading" secondItem="4rx-Dg-eMN" secondAttribute="leadingMargin" id="7qm-5a-vZg"/>
+                                                <constraint firstItem="qpu-09-k42" firstAttribute="leading" secondItem="4rx-Dg-eMN" secondAttribute="leadingMargin" id="A1e-Lh-ims"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="pyg-Ku-evn" secondAttribute="bottom" constant="10" id="Kse-mY-TaF"/>
+                                                <constraint firstItem="qpu-09-k42" firstAttribute="top" secondItem="4rx-Dg-eMN" secondAttribute="topMargin" id="M3e-FY-97H"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="LP8-fw-VZF" secondAttribute="bottom" constant="10" id="dt4-sY-Jjm"/>
+                                                <constraint firstItem="pyg-Ku-evn" firstAttribute="trailing" secondItem="4rx-Dg-eMN" secondAttribute="trailingMargin" id="u06-As-8XY"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblAño" destination="pyg-Ku-evn" id="Iu9-fb-yFd"/>
+                                            <outlet property="lblDirector" destination="LP8-fw-VZF" id="Xvb-1N-5d6"/>
+                                            <outlet property="lblTitulo" destination="qpu-09-k42" id="95d-By-FHT"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="2Oa-jh-us4"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="NLl-6V-pwt"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="5p2-s9-qpo" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="HQI-5R-8Sd"/>
+                            <constraint firstItem="5p2-s9-qpo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Hec-id-bHj"/>
+                            <constraint firstItem="5p2-s9-qpo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Z39-mH-vpM"/>
+                            <constraint firstAttribute="bottom" secondItem="5p2-s9-qpo" secondAttribute="bottom" id="tnh-Cl-6Pk"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="34.729064039408868"/>
         </scene>
     </scenes>
 </document>
